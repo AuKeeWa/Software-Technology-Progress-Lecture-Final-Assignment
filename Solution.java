@@ -9,8 +9,10 @@ public class Solution {
         }
         for (int i = batteries.length-1; i >=0 ; i--) {
             if(batteries[i] > sum/n){
-
+                sum -= batteries[i];
+                n--;
             }
+            else return sum/n;
         }
         return 0;
     }
